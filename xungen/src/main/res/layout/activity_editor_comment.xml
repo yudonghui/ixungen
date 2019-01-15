@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.activity.merchant.EditorCommentActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/titlBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.ruihuo.ixungen.view.CircleImageView
+                    android:id="@+id/logo"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/default_header" />
+
+                <TextView
+                    android:id="@+id/shopsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/deep_txt"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:gravity="start"
+                android:hint="请输入您的评价内容"
+                android:padding="10dp"
+                android:textColor="@color/gray_txt"
+                android:textSize="@dimen/sp_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/add_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/add_photo_comment" />
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="5dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="人均消费（元）"
+                    android:textColor="@color/deep_txt"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/consumeMoney"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="0123456789."
+                    android:gravity="center|right"
+                    android:hint="请输入人均消费金额"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_txt"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/zero"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="店铺评分"
+                    android:textColor="@color/deep_txt"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/oneStar"
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:padding="6dp"
+                    android:src="@mipmap/star_gray" />
+
+                <ImageView
+                    android:id="@+id/twoStar"
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:padding="6dp"
+                    android:src="@mipmap/star_gray" />
+
+                <ImageView
+                    android:id="@+id/threeStar"
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:padding="6dp"
+                    android:src="@mipmap/star_gray" />
+
+                <ImageView
+                    android:id="@+id/fourStar"
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:padding="6dp"
+                    android:src="@mipmap/star_gray" />
+
+                <ImageView
+                    android:id="@+id/fiveStar"
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="6dp"
+                    android:src="@mipmap/star_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

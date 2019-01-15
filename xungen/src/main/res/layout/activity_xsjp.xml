@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.ui.main.activity.XSJPActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/titlBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <com.ruihuo.ixungen.view.SearchViewY
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50" />
+
+    <com.ydh.refresh_layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_marginTop="95dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="true">
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray_bg"
+            android:dividerHeight="0.5dp" />
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.ydh.refresh_layout.SmartRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="95dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/no_result" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="没有搜索到匹配的结果，请换一个关键词试试"
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/gray_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/like2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="猜您喜欢"
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:tabIndicatorColor="@color/green_txt"
+            app:tabSelectedTextColor="@color/green_txt"
+            app:tabTextAppearance="@style/tablayout_text"
+            app:tabTextColor="@color/deep_txt" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</FrameLayout>

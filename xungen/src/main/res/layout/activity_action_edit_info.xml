@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.action.ActionEditInfoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@drawable/shape_action_title"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_titlebar_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:padding="15dp"
+                    android:src="@drawable/left_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="个人资料"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/action_introduce"
+                    android:layout_weight="1"
+                    android:text="头像" />
+
+                <ImageView
+                    android:id="@+id/image_header"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity=""
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/default_header" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:id="@+id/ll_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/action_introduce"
+                    android:layout_weight="1"
+                    android:text="用户名" />
+
+                <TextView
+                    android:id="@+id/text_username"
+                    style="@style/action_introduce3"
+                    android:text="于东辉" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:id="@+id/ll_sex"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/action_introduce"
+                    android:layout_weight="1"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/text_sex"
+                    style="@style/action_introduce3"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:id="@+id/ll_age"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/action_introduce"
+                    android:layout_weight="1"
+                    android:text="年龄" />
+
+                <TextView
+                    android:id="@+id/text_age"
+                    style="@style/action_introduce3"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:id="@+id/ll_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/action_introduce"
+                    android:layout_weight="1"
+                    android:text="出生日期" />
+
+                <TextView
+                    android:id="@+id/text_birthday"
+                    style="@style/action_introduce3"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:id="@+id/ll_height"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/action_introduce"
+                    android:layout_weight="1"
+                    android:text="身高" />
+
+                <TextView
+                    android:id="@+id/text_height"
+                    style="@style/action_introduce3"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:id="@+id/ll_weight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/action_introduce"
+                    android:layout_weight="1"
+                    android:text="体重" />
+
+                <TextView
+                    android:id="@+id/text_weight"
+                    style="@style/action_introduce3"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <LinearLayout
+                android:id="@+id/ll_hobby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="兴趣爱好"
+                    android:textColor="@color/deep_txt"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/text_hobby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="ddddsadfasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+                    android:textColor="@color/gray_txt"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_box" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="个人宣言"
+
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/manifesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_gray"
+                android:hint="请介绍您自己，方便大家了解您并投票给您"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/gray_txt"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_btn_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="完成"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.action.SuccessActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/shape_action_title">
+
+        <ImageView
+            android:id="@+id/image_titlebar_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:padding="15dp"
+            android:src="@drawable/left_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_18"
+            android:text="添加视频"
+            />
+        <TextView
+            android:id="@+id/text_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="发送"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_16"
+            />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null" />
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/video_bg"
+            android:src="@mipmap/default_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_play" />
+    </FrameLayout>
+
+</LinearLayout>

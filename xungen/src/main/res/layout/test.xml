@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_fenzan"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/play_times"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="次播放了"
+            android:textColor="@color/gray_txt"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/share_video"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/share_times"
+            android:src="@mipmap/share_bottom"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/share_times"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/image_praise"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/deep_txt"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/image_praise"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/praise_times"
+            android:src="@mipmap/unpraise" />
+
+        <TextView
+            android:id="@+id/praise_times"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/deep_txt"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+</FrameLayout>

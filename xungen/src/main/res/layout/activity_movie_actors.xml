@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_movie_actors"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.activity.MovieActorsActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/movieTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <com.ydh.refresh_layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        app:srlEnableLoadMore="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@color/gray_bg"
+            android:horizontalSpacing="1dp"
+            android:numColumns="4"
+            android:verticalSpacing="1dp" />
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.ydh.refresh_layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_txt"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/photo_actor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</FrameLayout>

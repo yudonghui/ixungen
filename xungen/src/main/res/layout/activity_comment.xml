@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_comment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.action.CommentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_edit_gray"
+            android:gravity="start"
+            android:hint="请输入内容"
+            android:minHeight="100dp"
+            android:padding="10dp"
+            android:textColor="@color/deep_txt"
+            android:textSize="@dimen/sp_13" />
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_introduce"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.activity.useractivity.IntroduceActivity">
+
+    <EditText
+        android:id="@+id/et_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="start"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_5_white"
+        android:hint="请输入宗亲简介"
+        android:textColor="@color/deep_txt"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="\t给自己的宗亲会一个详细的介绍，方便更多宗亲加入。"
+        android:textColor="@color/gray_txt"
+        android:textSize="@dimen/sp_12" />
+</LinearLayout>

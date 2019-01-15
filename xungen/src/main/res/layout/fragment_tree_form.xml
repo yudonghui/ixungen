@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ydh.refresh_layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:srlEnableLoadMore="true">
+
+    <com.ydh.refresh_layout.header.YuHeaderGif
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/no_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/no_data_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎创建属于您自己的家谱"
+                android:textColor="@color/deep_txt" />
+
+            <TextView
+                android:id="@+id/no_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_btn_bg"
+                android:paddingBottom="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingTop="10dp"
+                android:text="创建家谱"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray_bg"
+            android:dividerHeight="0.5dp" />
+    </LinearLayout>
+
+    <com.ydh.refresh_layout.header.YuHeaderGif
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</com.ydh.refresh_layout.SmartRefreshLayout>

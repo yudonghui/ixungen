@@ -1,0 +1,169 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--手机最上面的颜色-->
+        <item name="colorPrimaryDark">@color/brown_bg</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- <item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <declare-styleable name="TimeTextView">
+
+    </declare-styleable>
+    <!--首页中间图片-->
+    <style name="gridview_image">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+    <!--首页中间文字-->
+    <style name="gridview_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/brown_txt</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+    <!--首页中间ll-->
+    <style name="gridview_ll">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--提示框，dialog样式-->
+    <style name="HintDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+    <!--头像设置成圆形，自定义控件用到的style-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <!--仿ios对话框，样式的设置-->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AnimationRightFade">
+        <item name="android:windowEnterAnimation">@anim/in_righttoleft</item>
+        <item name="android:windowExitAnimation">@anim/out_lefttoright</item>
+    </style>
+
+    <style name="action_introduce">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textColor">@color/deep_txt</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="action_introduce2">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textColor">@color/gray_txt</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="action_introduce3">
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textColor">@color/gray_txt</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="tablayout_text">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="photoImg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">107dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <!--底部弹出的滑动选择pop的style-->
+    <style name="AnimationBottomFade">
+        <item name="android:windowEnterAnimation">@anim/in_bottomtotop</item>
+        <item name="android:windowExitAnimation">@anim/out_toptobottom</item>
+    </style>
+
+    <style name="calendar_week_item_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/calendar_enable_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <declare-styleable name="DayPickerView">
+        <attr name="colorCurrentDay" format="color" />               <!-- 今天字体颜色 -->
+        <attr name="colorSelectedDayBackground" format="color" />    <!-- 被选中的日期背景颜色 -->
+        <attr name="colorSelectedDayStartEndBg" format="color" /><!-- 被选中的入住和离店日期背景颜色 -->
+        <attr name="colorSelectedDayText" format="color" />          <!-- 被选中的日期字体颜色 -->
+        <attr name="colorPreviousDayText" format="color" />          <!-- 已过去的日期字体颜色 -->
+        <attr name="colorNormalDayText" format="color" />           <!-- 正常日期颜色 -->
+        <attr name="colorYearMonthText" format="color" />           <!-- 头部年份月份字体颜色 -->
+        <attr name="colorWeekText" format="color" />                <!-- 头部星期几字体颜色 -->
+        <attr name="colorBusyDaysBg" format="color" />              <!-- 被占用的日期背景颜色 -->
+        <attr name="colorInValidDaysBg" format="color" />           <!-- 禁用的日期背景颜色 -->
+        <attr name="colorBusyDaysText" format="color" />            <!-- 被占用的日期字体颜色 -->
+        <attr name="colorInValidDaysText" format="color" />         <!-- 禁用的日期字体颜色 -->
+
+        <attr name="textSizeDay" format="dimension" />               <!-- 正常日期字体大小 -->
+        <attr name="textSizeTag" format="dimension" />               <!-- 标签字体大小 -->
+        <attr name="textSizeYearMonth" format="dimension" />        <!-- 头部年份月份字体大小 -->
+        <attr name="textSizeWeek" format="dimension" />             <!-- 头部星期几字体大小 -->
+        <attr name="headerMonthHeight" format="dimension" />        <!-- 头部高度 -->
+        <attr name="selectedDayRadius" format="dimension" />        <!-- 日期半径 -->
+        <attr name="calendarHeight" format="dimension" />           <!-- 行高 -->
+        <attr name="enablePreviousDay" format="boolean" />          <!-- 已过去的日期是否能被操作 -->
+    </declare-styleable>
+    <style name="anim_in_out">
+        <item name="android:windowEnterAnimation">@anim/slide_to_out</item>
+        <item name="android:windowExitAnimation">@anim/slide_to_in</item>
+    </style>
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

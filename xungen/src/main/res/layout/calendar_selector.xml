@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="选择入住和离店日期"
+            android:textColor="@color/deep_txt"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:text="×"
+            android:textColor="@color/gray_txt"
+            android:textSize="24sp" />
+    </FrameLayout>
+
+    <!-- <ListView
+         android:id="@+id/lv_calendar"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:cacheColorHint="@android:color/transparent"
+         android:divider="@color/transparent"
+         android:dividerHeight="0dp"
+         android:listSelector="@null" />
+ -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ruihuo.ixungen.calendars.DayPickerView
+            android:id="@+id/dpv_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:calendarHeight="320dp"
+            app:colorBusyDaysBg="#727272"
+            app:colorBusyDaysText="#FFFFFF"
+            app:colorCurrentDay="#18bd36"
+            app:colorInValidDaysBg="#727272"
+            app:colorInValidDaysText="#FFFFFF"
+            app:colorNormalDayText="#000000"
+            app:colorPreviousDayText="#727272"
+            app:colorSelectedDayBackground="#18bd36"
+            app:colorSelectedDayStartEndBg="#18bd36"
+            app:colorSelectedDayText="@color/selected_day_text"
+            app:colorWeekText="#000000"
+
+            app:colorYearMonthText="#000000"
+            app:enablePreviousDay="false"
+            app:headerMonthHeight="60dp"
+            app:selectedDayRadius="20dp"
+            app:textSizeDay="14sp"
+            app:textSizeTag="12sp"
+            app:textSizeWeek="14sp"
+            app:textSizeYearMonth="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shape_btn_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="完成"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/brown_bg">
+
+        <ImageView
+            android:id="@+id/saoyisao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@mipmap/saoyisao"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="根信"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/sms"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:src="@mipmap/discussion" />
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:src="@drawable/add"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_sms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/sms_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="消息"
+                android:textColor="@color/brown_bg"
+                android:textSize="@dimen/sp_18" />
+
+            <View
+                android:id="@+id/sms_bottom"
+                android:layout_width="35dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:background="@color/brown_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_family"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/family_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="通讯录"
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_18" />
+
+            <View
+                android:id="@+id/family_bottom"
+                android:layout_width="35dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:background="@color/brown_bg"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

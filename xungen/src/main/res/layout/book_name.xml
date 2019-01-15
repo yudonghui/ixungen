@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@mipmap/book_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:background="@mipmap/cover_white"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="4">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="1"
+                    android:text="广西壮族鲨大富豪撒阿道夫"
+                    android:textColor="@color/deep_txt"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/stemmaName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="5dp"
+                    android:ems="1"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.4"
+                    android:text="于是吉普"
+                    android:textColor="@color/deep_txt"
+                    android:textSize="@dimen/sp_30"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="(卷一)"
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_18" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

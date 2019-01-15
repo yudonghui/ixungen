@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">炎黄寻根</string>
+    <string name="password">请设置密码位数在6-24之间,\n只能输入大小字母、数字或者下划线</string>
+    <string name="hint">真实姓名绑定后无法自行修改，如需修改联系客服0713-2790279</string>
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
+    <string name="sunday">日</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="t_d_a_t">后天</string>
+    <string name="order_day">\n预订日</string>
+    <!-- 日历用到的typeface -->
+    <string name="sans_serif" translatable="false">sans-serif</string>
+    <string name="single_room">单人间</string>
+    <string name="double_room">双人标间</string>
+    <string name="app_introduce">寻根溯源,传承中华文化,发现姓氏来源-炎黄寻根网</string>
+    <string name="app_title">炎黄寻根网</string>
+    <string name="wifi">WIFI</string>
+    <string name="stopping_place">停车场</string>
+    <string name="internet">宽带</string>
+    <string name="dining_hall">餐厅</string>
+    <string name="xingli">行李寄存</string>
+    <string name="zhuchefuwu">租车服务</string>
+    <string name="jiaoxingfuwu">叫醒服务</string>
+    <string name="songcanfuwu">送餐服务</string>
+    <string name="xiyifuwu">洗衣服务</string>
+    <string name="shafawei">沙发位</string>
+    <string name="wuyanqu">无烟区</string>
+    <string name="baojian">包间</string>
+    <string name="ertongqu">儿童区</string>
+    <string name="biaoyan">表演</string>
+    <string name="shuaka">刷卡</string>
+    <string name="baobaoyi">宝宝骑</string>
+</resources>

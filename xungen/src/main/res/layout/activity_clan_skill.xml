@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_clan_skill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.home.ClanSkillActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/clanskill_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <com.ydh.refresh_layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="true">
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/ptlv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:divider="@color/transparent"
+            android:dividerHeight="10dp"
+            android:listSelector="@color/transparent" />
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.ydh.refresh_layout.SmartRefreshLayout>
+</LinearLayout>

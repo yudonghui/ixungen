@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tidbits_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.activity.TidbitsFormActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/tidTitlbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <com.ruihuo.ixungen.view.SearchViewY
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.ydh.refresh_layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="true">
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="#00000000" />
+
+        <com.ydh.refresh_layout.header.YuHeaderGif
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.ydh.refresh_layout.SmartRefreshLayout>
+</LinearLayout>

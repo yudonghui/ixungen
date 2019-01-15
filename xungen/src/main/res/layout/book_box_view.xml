@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/brown_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_brown_1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_brown_2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+
+                <TextView
+                    android:id="@+id/shixi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="世系/"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/shixi1"
+                    android:gravity="center"
+                    android:text="辈分: "
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/generation1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/clan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/generation1"
+                    android:gravity="center"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/brother1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right|center"
+                    android:paddingRight="5dp"
+                    android:text="0人\n兄弟姐妹"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/browns_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_brown_3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="本人"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="配偶"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="姓名"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_name1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="生年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_birthday1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="卒年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_dateDate1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="排行"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_rank1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/shape_brown_box1">
+
+                    <ImageView
+                        android:id="@+id/self_avatar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/default_header_clan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="姓名"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_name1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="生年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_birthday1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="卒年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_dateDate1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="排行"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_rank1"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/shape_brown_box1">
+
+                    <ImageView
+                        android:id="@+id/spouse_avatar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/default_header_clan" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_brown_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="父亲"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:id="@+id/father1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="母亲"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:id="@+id/mother1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_brown_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="子女"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/children1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_brown_3"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="本人简介"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/introduce1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="暂无简介"
+                    android:lines="3"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_brown_2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/shixi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="世系/"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/shixi2"
+                    android:gravity="center"
+                    android:text="辈分: "
+                    android:textColor="@color/browns_txt"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/generation2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/clan2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/generation2"
+                    android:gravity="center"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/brother2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right|center"
+                    android:paddingRight="5dp"
+                    android:text="0人\n兄弟姐妹"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/browns_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_brown_3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="本人"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="配偶"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="姓名"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_name2"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="生年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_birthday2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="卒年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_dateDate2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="排行"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/self_rank2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/shape_brown_box1">
+
+                    <ImageView
+                        android:id="@+id/self_avatar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/default_header_clan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="姓名"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_name2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="生年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_birthday2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="卒年"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_dateDate2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="排行"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+
+                        <TextView
+                            android:id="@+id/spouse_rank2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_brown_3"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="--"
+                            android:textColor="@color/browns_txt"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/shape_brown_box1">
+
+                    <ImageView
+                        android:id="@+id/spouse_avatar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/default_header_clan" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_brown_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="父亲"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:id="@+id/father2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="母亲"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <TextView
+                    android:id="@+id/mother2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_brown_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="子女"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/children2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_brown_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="本人简介"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/browns_bg" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/introduce2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:lines="3"
+                    android:text="暂无简介"
+                    android:textColor="@color/browns_txt"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

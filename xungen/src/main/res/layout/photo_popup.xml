@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_5_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/buttonCamera"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/green_txt"
+            android:textSize="@dimen/sp_16" />
+        <View
+            android:id="@+id/dialog_lines"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/gray_box" />
+
+        <TextView
+            android:id="@+id/dialog_reply"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="回复"
+            android:visibility="gone"
+            android:textColor="@color/green_txt"
+            android:textSize="@dimen/sp_16" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_box" />
+
+        <TextView
+            android:id="@+id/buttonPhoto_selector"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="从相册选择"
+            android:textColor="@color/green_txt"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttoncancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_5_white"
+        android:text="取消"
+        android:textColor="@color/red_txt"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

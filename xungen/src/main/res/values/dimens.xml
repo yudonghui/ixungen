@@ -1,0 +1,50 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="richtextedit_padding_top">0dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_145">145dp</dimen>
+    <dimen name="dp_170">170dp</dimen>
+    <dimen name="dp_190">190dp</dimen>
+    <dimen name="dp_228">228dp</dimen>
+    <dimen name="dp_210">210dp</dimen>
+
+    <dimen name="sp_5">4sp</dimen>
+    <dimen name="sp_6">6sp</dimen>
+    <dimen name="sp_8">8sp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_23">23sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_26">26sp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+    <dimen name="sp_30">30sp</dimen>
+    <dimen name="sp_32">32sp</dimen>
+    <dimen name="sp_34">34sp</dimen>
+    <dimen name="sp_38">38sp</dimen>
+    <dimen name="calendar_item_order_day_size">3.5sp</dimen>
+    <dimen name="calendar_item_nonorder_day_size">5sp</dimen>
+    <!-- 日历定义的一些尺寸 -->
+    <dimen name="text_size_day">14sp</dimen>
+    <dimen name="text_size_tag">12sp</dimen>
+    <dimen name="text_size_month">16sp</dimen>
+    <dimen name="text_size_day_name">10sp</dimen>
+    <dimen name="header_month_height">60dip</dimen>
+    <dimen name="selected_day_radius">16dip</dimen>
+    <dimen name="calendar_height">270dip</dimen>
+</resources>

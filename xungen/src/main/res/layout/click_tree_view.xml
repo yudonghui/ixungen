@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.ruihuo.ixungen.ui.familytree.view.CircleMenuLayout
+        android:id="@+id/menulayout"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center">
+
+
+        <RelativeLayout
+            android:id="@id/id_circle_menu_item_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></RelativeLayout>
+    </com.ruihuo.ixungen.ui.familytree.view.CircleMenuLayout>
+</LinearLayout>

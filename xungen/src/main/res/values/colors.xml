@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="aaaaa">#987953</color>
+    <color name="bbbbb">#f97766</color>
+    <color name="tab_bg">#f7f7f7</color>
+
+    <color name="blue">#3b93e9</color>
+    <color name="transparent">#00000000</color>
+    <!--tab的颜色-->
+    <color name="tab_unselect">#999999</color>
+    <!--tab选中的颜色-->
+    <color name="tab_select">#835002</color>
+    <!--灰色边框,底部购买灰色背景-->
+    <color name="gray_box">#dddddd</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--绿色文字-->
+    <color name="green_txt">#18bd36</color>
+    <!--获取验证码-->
+    <color name="code_txt">#0ede39</color>
+    <!--重新获取验证码-->
+    <color name="again_code_txt">#08c7ce</color>
+    <!-- <color name="gray_bg">#646464</color>-->
+    <!--深棕色-->
+    <color name="brown_txt">#26211d</color>
+    <!--棕色，titlebar-->
+    <color name="brown_bg">#835002</color>
+    <!--浅棕色-->
+    <color name="browns_bg">#9a611c</color>
+    <!-- 浅棕色文字-->
+    <color name="browns_txt">#9C5E1F</color>
+    <!--灰色文字-->
+    <color name="gray_txt">#999999</color>
+    <!--根号数字颜色-->
+    <color name="red_txt">#ff2b30</color>
+    <!--验证码旁边竖线的颜色-->
+    <color name="gray_box_code">#5d6d6d</color>
+    <!--编辑框里面的白色文字-->
+    <color name="white_login">#7d9299</color>
+    <!--编辑框的背景颜色-->
+    <color name="gray_edit_bg">#70041d22</color>
+    <!--黑色字体,标题，贴标-->
+    <color name="deep_txt">#000000</color>
+    <!--浅灰色背景色-->
+    <color name="gray_bg">#ebebeb</color>
+    <!--活动个人中心绿色-->
+    <color name="green_bg_action">#2cea52</color>
+    <!--活动个人中心蓝色-->
+    <color name="blue_bg_action">#2ce8ea</color>
+    <!--深灰色-->
+    <color name="deep_gray">#6E6E6E</color>
+    <color name="gray_333">#333333</color>
+
+    <!--日历中用到的颜色-->
+    <color name="calendar_disable_color">#DDDDDD</color>
+    <color name="calendar_enable_color">#666666</color>
+    <color name="calendar_threeday_color">#FA383A</color>
+
+    <!-- 日历定义的一些颜色 -->
+    <color name="normal_day">#ff999999</color>
+    <color name="selected_day_background">#C2185B</color>
+    <color name="selected_day_text">#FFFFFF</color>
+    <color name="invalid_day_background">#c0c0c0</color>
+    <color name="color_ffebcd">#FFEBCD</color>
+    <color name="color_daf3fd">#DAF3FD</color>
+    <color name="color_0c3b82">#0C3B82</color>
+    <color name="color_12ba2a">#12BA2A</color>
+    <color name="color_f32c3b">#F32C3B</color>
+    <color name="color_eb920a">#EB920A</color>
+</resources>

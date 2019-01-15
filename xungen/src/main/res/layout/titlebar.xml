@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown_bg">
+
+    <ImageView
+        android:id="@+id/image_titlebar_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:padding="15dp"
+        android:src="@drawable/left_back" />
+
+    <TextView
+        android:id="@+id/titlebar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="掌上寻根"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <LinearLayout
+        android:id="@+id/ll_titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_ll_titlebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/image_ll_titlebar"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:text="注册"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/groups"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:src="@mipmap/groups"
+        android:visibility="gone" />
+</RelativeLayout>

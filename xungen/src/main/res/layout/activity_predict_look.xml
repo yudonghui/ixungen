@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_predict_look"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruihuo.ixungen.activity.merchant.PredictLookActivity">
+
+    <ImageView
+        android:id="@+id/oliveappLivenessImageView"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/default_photo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@mipmap/cancel" />
+
+        <ImageView
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@mipmap/comfirm" />
+    </LinearLayout>
+</LinearLayout>

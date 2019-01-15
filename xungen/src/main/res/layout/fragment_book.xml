@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/clan_bg"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:text="封面"
+            android:textColor="@color/deep_txt"
+            android:textSize="@dimen/sp_13" />
+
+        <ImageView
+            android:id="@+id/sub"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/sub_num" />
+
+        <EditText
+            android:id="@+id/pageNum"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:background="@drawable/shape_green_box_2"
+            android:digits="1234567890"
+            android:gravity="center"
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:text="0"
+            android:textColor="@color/deep_txt"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/add_num" />
+
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="尾页"
+            android:textColor="@color/deep_txt"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dk="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.useractivity.AgnationMemeberActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/friend_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 列表，占满屏幕 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <!-- 固定头item，浮在recyclerview上层的顶部 -->
+        <include layout="@layout/header" />
+
+        <!-- 中间字母提示控件，浮在recyclerview上层的右侧 -->
+        <com.ruihuo.ixungen.common.friends.view.CenterTipView
+            android:id="@+id/tv_center_tip"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            dk:bgColor="#90808080"
+            dk:textColor="#18bd36"
+            dk:textSizes="60sp"
+            dk:type="round" />
+
+        <!-- 右侧索引控件，浮在recyclerview上层的中心 -->
+        <com.ruihuo.ixungen.common.friends.view.RightIndexViewY
+            android:id="@+id/vg_right_container"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            dk:itemTextColorY="@android:color/holo_green_dark"
+            dk:itemTextSizeY="@dimen/sp_5"
+            dk:itemTextTouchBgColorY="@android:color/white"
+            dk:itemTouchBgColorY="#9966FF"
+            dk:rootBgColorY="@android:color/transparent"
+            dk:rootTouchBgColorY="#80041d22" />
+    </RelativeLayout>
+</LinearLayout>

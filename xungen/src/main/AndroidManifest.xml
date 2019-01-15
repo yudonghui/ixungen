@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ruihuo.ixungen">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 文件系统权限 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".XunGenApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".activity.Launch2Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- android:screenOrientation="portrait" -->
+        <activity
+            android:name=".activity.XunGenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.ruihuo.ixungen"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.login.PhoneLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.PasswordLoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 会话界面 -->
+        <activity
+            android:name=".activity.chatactivity.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.ruihuo.ixungen"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 会话列表 -->
+        <activity
+            android:name="activity.chatactivity.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.ruihuo.ixungen"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 聚合会话列表 -->
+        <activity
+            android:name=".activity.chatactivity.SubConversationListActivtiy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.ruihuo.ixungen"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- 接收推送消息 -->
+        <receiver
+            android:name=".rongyun.XunGenNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ruihuo.ixungen.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- QQ回调 -->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ReceiveActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105366902" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信支付回调函数 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--
+            &lt;!&ndash; 填写您从Mob开发者后台中得到的Appkey和AppSecret &ndash;&gt;
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="1d5a6d043d499" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="6dd490df862f2e4e10f856ad0a2db324" />
+        -->
+
+        <activity
+            android:name=".activity.PictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.SelectCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.SelectShiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.SelectXianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.SetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ArticleDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.wonderful.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.wonderful.WriteArticleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.UserInfoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.SafeSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationAdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationCreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.IntroduceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.FriendInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.FamilyWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AddAgnationAdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationPhotoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.EditorPhotoInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.family.NewFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.family.SearchFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.AgnationMemeberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.genxin.PostsSmsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.genxin.SystemSmsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.genxin.ActionSmsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ClanSkillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.RealNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <!-- 多选相册 -->
+        <activity
+            android:name="com.yanzhenjie.album.AlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="图库"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
+        <activity
+            android:name=".activity.h5activity.H5Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.genxin.ActionSmsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.genxin.JoinActionFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ClanBizActivity"
+            android:screenOrientation="portrait" />
+        <!-- 百度手机助手 -->
+        <!--
+                <meta-data
+                android:name="BDAPPID"
+                android:value="8089600" />
+            <meta-data
+                android:name="BDAPPKEY"
+                android:value="Gy30q7j4GD2fM0m3NlYwvpykwS5KhWHI" />
+
+            <activity
+                android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"
+                android:exported="false"
+                android:screenOrientation="sensor"
+                android:theme="@style/bdp_update_dialog_style_fullscreen" />
+
+            <receiver
+                android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver"
+                android:exported="false">
+                <intent-filter>
+                    <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE" />
+                    <action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE" />
+                    <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS" />
+                    <action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE" />
+                </intent-filter>
+            </receiver>
+        -->
+        <!-- vitamio视频播放 -->
+        <!-- 必须初始化 -->
+        <!--
+            <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        -->
+        <!--
+1、不设置Activity的android:configChanges时，切屏会重新调用各个生命周期，切横屏时会执行一次，切竖屏时会执行两次
+
+2、设置Activity的android:configChanges="orientation"时，切屏还是会重新调用各个生命周期，切横、竖屏时只会执行一次
+
+3、设置Activity的android:configChanges="orientation|keyboardHidden"时，切屏不会重新调用各个生命周期，只会执行onConfigurationChanged方法
+
+但是，自从Android 3.2（API 13），在设置Activity的android:configChanges="orientation|keyboardHidden"后，
+还是一样 会重新调用各个生命周期的。因为screen size也开始跟着设备的横竖切换而改变。所以，在AndroidManifest.xml里设置的MiniSdkVersion和
+ TargetSdkVersion属性大于等于13的情况下，
+如果你想阻止程序在运行时重新加载Activity，除了设置"orientation"， 你还必须设置"ScreenSize"。
+        -->
+        <activity
+            android:name=".activity.home.RootMediaActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".activity.useractivity.ChangePhoneActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activity.useractivity.MyVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.useractivity.TwoCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.ActionUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.ActionEditInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.ActionPhotoFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.ActionPhotoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.ActionEditorPhotoInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.RecordVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.SuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.VideoDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.VideoPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.ClanSkillDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.LaunchActivity" />
+        <activity android:name=".activity.home.clanskill.CreatSkillActivity" />
+        <activity android:name=".activity.home.clanskill.DealPhotoActivity" />
+        <activity android:name=".activity.ShopsRequestActivity" />
+        <activity android:name=".activity.ShopsBankActivity" />
+        <activity android:name=".activity.ShopsInfoActivity" />
+        <activity android:name=".activity.ShopsCommitActivity" />
+        <activity android:name=".activity.merchant.SampleIdcardCaptorActivity" />
+        <activity android:name=".activity.merchant.PredictLookActivity" />
+        <activity android:name=".activity.merchant.ProcessActivity" />
+        <activity android:name=".activity.merchant.EnvironmentFormActivity" />
+        <activity android:name=".activity.merchant.CheckInfoActivity" />
+        <activity android:name=".activity.MovieBaseActivity" />
+        <activity android:name=".activity.MovieActorsActivity" />
+        <activity android:name=".activity.ActorApplyActivity" />
+        <activity android:name=".activity.TidbitsFormActivity" />
+        <activity android:name=".activity.ActorApplyStateActivity" />
+        <activity android:name=".activity.PaymentActivity" />
+        <activity android:name=".activity.home.XWFormActivity" />
+        <activity android:name=".activity.home.XWEditActivity" />
+        <!-- 下面两个是支付宝接入的 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activity.home.XWFormDetailActivity" />
+        <activity android:name=".album.PickBigImagesActivity" />
+        <activity android:name=".album.PickOrTakeImageActivity" />
+        <activity android:name=".activity.merchant.MyShopsActivity" />
+        <activity android:name=".activity.merchant.AddShopsActivity" />
+        <activity android:name=".activity.merchant.RoomPhotoActivity" />
+        <activity android:name=".activity.merchant.ShopsPhotoActivity" />
+        <activity android:name=".activity.merchant.ShopGalleryActivity" />
+        <activity android:name=".activity.merchant.ShopsManagerActivity" />
+        <activity android:name=".activity.merchant.HotelDetailActivity" />
+        <activity android:name=".activity.merchant.ShopSettingActivity" />
+        <activity android:name=".activity.merchant.HotelActivity" />
+        <activity android:name=".calendarselector.CalendarSelectorActivity" />
+        <activity android:name=".activity.merchant.OrderActivity" />
+        <activity android:name=".activity.merchant.ShopsCommentActivity" />
+        <activity android:name=".activity.merchant.NearByShopActivity" />
+        <activity android:name=".activity.merchant.RecommendFoodActivity" />
+        <activity android:name=".activity.BaseNoTitleActivity" />
+        <activity android:name=".activity.merchant.GoodsDetailActivity" />
+        <activity android:name=".activity.merchant.EditorCommentActivity" />
+        <activity android:name=".activity.merchant.AddGoodsFoodActivity" />
+        <activity android:name=".activity.merchant.OrderFormActivity" />
+        <activity android:name=".activity.merchant.OrderDetailActivity" />
+        <activity android:name=".activity.merchant.RefundActivity" />
+        <activity android:name=".activity.merchant.UnusedOrderActivity" />
+        <activity android:name=".activity.merchant.UserRecommendDetailActivity" />
+        <activity android:name=".activity.merchant.ApplyQuitOrderActivity" />
+        <activity android:name=".activity.merchant.ReplyRecommentActivity" />
+        <activity android:name=".activity.merchant.VerifyOrderActivity" />
+        <activity android:name=".activity.merchant.TravelActivity" />
+
+        <!-- 友盟统计 -->
+        <!--
+        测试  593e4d8fae1bf8624b000ff4
+        正式  59acea4c99f0c75015000130
+        -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59acea4c99f0c75015000130" />
+
+        <activity android:name=".editorvideo.VideoEditActivity" />
+        <activity android:name=".activity.chatactivity.FriendFormActivity" />
+        <activity android:name=".activity.chatactivity.DiscussionInfoActivity" />
+        <activity android:name=".activity.chatactivity.DiscussionMemberActivity" />
+        <activity android:name=".activity.chatactivity.DiscussionFormActivity" />
+        <activity android:name=".activity.chatactivity.JoinDiscussionActivity" />
+        <!--
+            <provider
+            android:authorities="io.rong.imkit.widget.provider"
+            android:name=".activity.chatactivity.ContProvider"/>
+        -->
+        <activity android:name=".base.BaseNewActivity" />
+        <activity android:name=".activity.useractivity.NewMemeberActivity" />
+        <activity android:name=".activity.useractivity.AgnationInviteActivity" />
+        <activity android:name=".activity.ClanGleanActivity" />
+        <activity android:name=".ui.main.activity.XSJPActivity" />
+        <activity android:name=".ui.familytree.activity.TreeActivity" />
+        <activity android:name=".ui.familytree.activity.TreeAddActivity" />
+        <activity android:name=".ui.familytree.activity.TreeEditorActivity" />
+        <activity android:name=".ui.familytree.activity.MyTreeActivity" />
+        <activity android:name=".ui.familytree.activity.TreeDetailActivity" />
+        <activity android:name=".ui.familytree.activity.CreateTreeActivity" />
+        <activity android:name=".ui.familytree.activity.StemmaDetailActivity" />
+        <activity android:name=".ui.familytree.activity.InviteActivity" />
+        <activity android:name=".ui.familytree.activity.Test2Activity" />
+        <activity android:name=".ui.familytree.activity.EditeStemmaInfoActivity" />
+        <activity android:name=".ui.familytree.activity.EditorStemmaActivity" />
+        <activity android:name=".ui.familytree.activity.SpouseFromActivity" />
+        <activity android:name=".activity.AddNewsActivity" />
+        <activity android:name=".activity.LookPrivateActivity" />
+        <activity android:name=".action.CommentActivity" />
+        <activity android:name=".action.DynamicDetailActivity" />
+        <activity android:name=".activity.useractivity.AgnationStatusActivity" />
+        <activity android:name=".activity.RecommendActivity" />
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".ui.coin.activity.CoinActivity" />
+        <activity android:name=".ui.coin.activity.PaymentCoinActivity" />
+        <activity android:name=".activity.home.NewsSearchActivity" />
+        <activity android:name=".activity.home.EditeActivity" />
+        <activity android:name=".activity.genxin.SearchFriendActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".activity.useractivity.AgnationNewActivity"></activity>
+    </application>
+
+</manifest>

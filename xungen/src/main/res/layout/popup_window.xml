@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/tankuangright"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/popup_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="我的提问"
+        android:textColor="@color/deep_txt"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/firstline"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_box"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/popup_smshint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:text="消息提示"
+        android:textColor="@color/deep_txt"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/popup_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="分享现有家谱"
+        android:textColor="@color/deep_txt"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/secondline"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_box"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/popup_look"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:text="查看现有家谱"
+        android:textColor="@color/deep_txt"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+</LinearLayout>

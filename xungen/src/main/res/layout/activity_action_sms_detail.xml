@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_action_sms_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.genxin.ActionSmsDetailActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/action_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <TextView
+        android:id="@+id/action_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="您的报名已确认"
+        android:textColor="@color/green_txt"
+        android:textSize="@dimen/sp_16" />
+
+    <LinearLayout
+        android:id="@+id/ll_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动名称："
+                android:textColor="@color/gray_txt"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/action_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动时间："
+                android:textColor="@color/gray_txt"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/action_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动地址："
+                android:textColor="@color/gray_txt"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/action_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="参与人数："
+                android:textColor="@color/gray_txt"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/action_joinNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/deep_txt"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/quit_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/shape_btn_red"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="取消活动"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <!--<TextView
+        android:id="@+id/action_joiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/shape_btn_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="活动参与人"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />-->
+</LinearLayout>

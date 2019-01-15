@@ -1,0 +1,1 @@
+include ':xungen', ':IMLib', ':IMKit', ':lib-zxing', ':share', ':SmallVideoLib2', ':refresh-layout'

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ruihuo.ixungen.action.MovieRecorderView
+            android:id="@+id/movieRecorderView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView_release_to_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="110dp"
+            android:background="#99b31921"
+            android:padding="2dp"
+            android:text="松开取消"
+            android:textColor="#ffffff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:alpha="0.2"
+            android:background="#000000" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/left_back" />
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_root"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/textView_up_to_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="#33000000"
+            android:text="上移取消"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_bg_red" />
+
+            <TextView
+                android:id="@+id/textView_count_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#707070"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar_loading"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="3dp"
+            android:progressDrawable="@drawable/progressbar_video" />
+
+        <Button
+            android:id="@+id/button_shoot"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_bg_red"
+            android:text="按住拍"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</FrameLayout>

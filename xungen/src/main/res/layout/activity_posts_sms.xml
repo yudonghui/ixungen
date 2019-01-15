@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_posts_sms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.genxin.PostsSmsActivity">
+
+    <com.ruihuo.ixungen.view.TitleBar
+        android:id="@+id/postsms_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+    <ImageView
+        android:id="@+id/no_data"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@mipmap/no_data"
+        android:visibility="gone" />
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:divider="@color/gray_bg"
+        android:dividerHeight="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_editor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray_bg"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_sms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@color/transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/green_txt" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/send_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shape_gray_box"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="发送"
+            android:textColor="@color/gray_txt"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/photo_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_photo" />
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/unselect"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/photo_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ertyu"
+        android:textColor="@color/deep_txt"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/photo_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ertyui"
+        android:textColor="@color/gray_txt"
+        android:textSize="@dimen/sp_12" />
+</LinearLayout>
